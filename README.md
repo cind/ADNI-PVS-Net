@@ -9,7 +9,7 @@ If you use this model in your research, please cite the following paper:
 # How to run this model
 
 ## 1. Preprocessing
-Images used in training underwent ANTS non-local means denoising, followed by Freesurfer's recon-all preprocessing, which included motion correction, bias field correction, and intensity normalization. Output image used was the 'T1.mgz' file. More information about the images can be found in the publication above.
+Images used in training underwent ANTS non-local means denoising, followed by Freesurfer's recon-all preprocessing, which included motion correction, N4 bias field correction, and intensity normalization. Output image used was the 'T1.mgz' file. More information about the images can be found in the publication above.
 
 ## 2. Model download and folder structuring
 Please follow the instructions on downloading the nnU-Net model and following its folder structure: https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/getting-started/installation-and-setup.md
