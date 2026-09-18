@@ -18,7 +18,7 @@ export nnUNet_results="/your/home/path/nnUNet_PVS_ADNI_model/nnUNet_results"
 #"$venv_path/bin/nnUNetv2_install_pretrained_model_from_zip" $home/model_weights/model_name
 
 ## run this to inference (change Dataset001_PVS to your dataset name)
-"$venv_path/bin/nnUNetv2_predict" -i $nnUNet_raw/Dataset001_PVS/imagesTs -o $nnUNet_results -d 001 -f 0 1 2 3 4 -tr nnUNetTrainer -c 3d_fullres -p nnUNetPlans 
+"$venv_path/bin/nnUNetv2_predict" -i $nnUNet_raw/Dataset001_PVS/imagesTs -o $nnUNet_results/inference_results -d 001 -f 0 1 2 3 4 -tr nnUNetTrainerDiceCELoss_noSmooth -c 3d_fullres -p nnUNetPlans 
 
 ## postprocessing can be run on this model but is likely not necessary
 # "$venv_path/bin/nnUNetv2_apply_postprocessing" -i $nnUNet_results -o $nnUNet_results/postprocessed -pp_pkl_file /your/home/path/nnUNet_PVS_ADNI_model/nnUNet_results/Dataset001_PVS/nnUNetTrainer__nnUNetPlans__3d_fullres/crossval_results_folds_0_1_2_3_4/postprocessing.pkl -np 8 -plans_json /your/home/path/nnUNet_PVS_ADNI_model/nnUNet_results/Dataset001_PVS/nnUNetTrainer__nnUNetPlans__3d_fullres/crossval_results_folds_0_1_2_3_4/plans.json
