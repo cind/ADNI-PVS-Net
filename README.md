@@ -23,7 +23,7 @@ Weights can be placed in the nnU-Net `results` folder:
 ```text
 nnUNet_results/
 └── DatasetXXX_MyDataset
-    ├── nnUNetTrainer__nnUNetPlans__3d_fullres
+    ├── nnUNetTrainerDiceCELoss_noSmooth__nnUNetPlans__3d_fullres
 ```
 ## 4. Running the model
 Please follow the instruction on how to inference with nnU-Net models: https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/how-to/run-inference.md
